@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "djt1tijo3VGZADAOA9gKJpbnbte7nGsPVLF82U8yDQHBC+4rGLjdETl/Oxly84kHSuQDNO9CqWhpw4XxdbH7Bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sergey Richter\\Desktop\\Neuer Ordner (13)\\commentsNotifBot\\commentsNotifBot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sergey Richter\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Sergey Richter\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
+    "C:\\Users\\Sergey Richter\\.nuget\\packages\\telegram.bot\\17.0.0\\telegram.bot.17.0.0.nupkg.sha512",
+    "C:\\Users\\Sergey Richter\\.nuget\\packages\\telegram.bot.extensions.polling\\1.0.2\\telegram.bot.extensions.polling.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
