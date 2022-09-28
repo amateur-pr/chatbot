@@ -16,29 +16,16 @@ namespace commentsNotifBot
         static void Main(string[] args)
         {
           
-           
-
             Bot = new TelegramBotClient(token);
-
             using var cts = new CancellationTokenSource();
-          
-
             ReceiverOptions receiverOptions = new() { AllowedUpdates = { } };
             Bot.StartReceiving(Handlers.HandleUpdateAsync,
-                               Handlers.HandleErrorAsync,
-                             
+                               Handlers.HandleErrorAsync,                           
                                receiverOptions,
                                cts.Token); ;
-
             Console.WriteLine($"Bot ist gestartet...");
             Console.ReadLine();
-
-            
             cts.Cancel();
         }
-
-      
-
-       
     }
 }

@@ -41,7 +41,7 @@ namespace Telegram.Bot.Examples.Polling
                     await botClient.SendTextMessageAsync(massage.Chat.Id, "Gut, und dir?");
                     return;
                 }
-                if (massage.Text.ToLower().Contains("wie heisst du?"))
+                if (massage.Text.ToLower().Contains("wie heißt du?"))
                 {
                     await botClient.SendTextMessageAsync(massage.Chat.Id, "Erraten!");
                     return;
@@ -51,6 +51,22 @@ namespace Telegram.Bot.Examples.Polling
                     await botClient.SendTextMessageAsync(massage.Chat.Id, "Jaaaa Cool!");
                     return;
                 }
+                if (massage.Text.ToLower().Contains("wer dich gemacht hat?"))
+                {
+                    await botClient.SendTextMessageAsync(massage.Chat.Id, "Gruppe (Sarah, Garvin, Mansour, Sergey)");
+                    return;
+                }
+                if (massage.Text.ToLower().Contains("gut"))
+                {
+                    await botClient.SendTextMessageAsync(massage.Chat.Id, "Möchtest du reden?");
+                    return;
+                }
+                if (massage.Text.ToLower().Contains("hallo"))
+                {
+                    await botClient.SendTextMessageAsync(massage.Chat.Id, "Moin ;)");
+                    return;
+                }
+               
             }
             var handler = update.Type switch
             {
@@ -92,7 +108,7 @@ namespace Telegram.Bot.Examples.Polling
                     await botClient.DeleteMessageAsync(message.Chat.Id, message.MessageId);
         }
 
-        // Process Inline Keyboard callback data
+    
         private static async Task BotOnCallbackQueryReceived(ITelegramBotClient botClient, CallbackQuery callbackQuery)
         {
             await botClient.AnswerCallbackQueryAsync(
@@ -109,7 +125,7 @@ namespace Telegram.Bot.Examples.Polling
             Console.WriteLine($"Received inline query from: {inlineQuery.From.Id}");
 
             InlineQueryResult[] results = {
-            // displayed result
+         
             new InlineQueryResultArticle(
                 id: "3",
                 title: "TgBots",
